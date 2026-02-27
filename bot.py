@@ -1,19 +1,15 @@
-Python
-Copier le code
 import telebot
+import os
 
-# Mete token ou jwenn nan BotFather isit
-TOKEN = "VOTRE_TOKEN_LAN"
+# Li token lan depi environment variable sou Render
+TOKEN = os.environ.get("TELEGRAM_TOKEN")
 
 bot = telebot.TeleBot(TOKEN)
 
-# Reponn lè moun tape /start
+# Defini kòmand /start
 @bot.message_handler(commands=['start'])
 def send_welcome(message):
-    bot.reply_to(message, "🤖 Bern Signal Pro Bot la ap mache!")
-
-# Ou ka ajoute plis fonksyonalite isit la
-# Egzanp: voye siyal, mesaj otomatik, etc.
+    bot.reply_to(message, "🤖 Bern Signal Pro Bot la ap mache! 🚀")
 
 print("Bot la ap kouri...")
 bot.infinity_polling()
