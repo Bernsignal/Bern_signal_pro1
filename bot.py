@@ -1,9 +1,10 @@
+import os
 import telebot
 import time
 import random
 import threading
 
-TOKEN = "METE_TOKEN_OU_ISIT"
+TOKEN = os.environ.get("TOKEN")
 
 bot = telebot.TeleBot(TOKEN)
 
